@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/davidli'
+let g:netrw_dirhist_2='/home/davidli/.vim'
+let g:netrw_dirhist_3='/home/davidli/.vim/colors'
+let g:netrw_dirhist_4='/home/davidli/.vim/autoload'
+let g:netrw_dirhist_5='/home/davidli/.vim'
+let g:netrw_dirhist_6='/home/davidli/dev/web/web/script/site'
+let g:netrw_dirhist_7='/home/davidli/dev/web/web/connect'
+let g:netrw_dirhist_8='/home/davidli/.config/.git'
