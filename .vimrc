@@ -41,6 +41,7 @@ nmap ; :
 nmap \ :FufCoverageFile<CR>
 nmap <Leader>f :FufMruFile<CR>
 nmap <Leader>t :NERDTree<CR>
+nnoremap <Leader>u :GundoToggle<CR>
 
 " Enable features
 call pathogen#runtime_append_all_bundles()
