@@ -22,8 +22,15 @@ set listchars=tab:·-,trail:-
 set mouse=a
 set relativenumber
 set completeopt=longest,menuone
+set cursorline
 
 syntax on
+
+" History
+set undodir=/tmp
+set undofile
+set undolevels=1000
+set undoreload=10000
 
 " Text Formatting and Layout
 set nowrap
@@ -40,6 +47,7 @@ nmap } <C-w>j
 nmap ; :
 nmap \ :FufCoverageFile<CR>
 nmap <Leader>f :FufMruFile<CR>
+nmap <Leader>d :FufDir<CR>
 nmap <Leader>t :NERDTree<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 
