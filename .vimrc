@@ -1,4 +1,5 @@
 " Basic Commands
+set autoread
 set nocompatible
 set autoindent
 set smartindent
@@ -9,6 +10,9 @@ set hls
 set nu
 set incsearch
 set mouse=a
+set noswapfile
+set nowb
+set nobackup
 
 " VIM User Interface
 set backspace=indent,eol,start
@@ -40,10 +44,6 @@ set shiftwidth=2
 " Key Bindings
 let mapleader = ","
 
-nmap [ <C-w>h
-nmap ] <C-w>l
-nmap { <C-w>k
-nmap } <C-w>j
 nmap ; :
 nmap \ :FufCoverageFile<CR>
 nmap <Leader>f :FufMruFile<CR>
