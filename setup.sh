@@ -1,7 +1,10 @@
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-rm -v ~/.vim ~/.vimrc ~/.zshrc
+ln -fsv $DIR/.vim ~
+ln -fv $DIR/.vimrc ~/.vimrc
+ln -fv $DIR/.zshrc ~/.zshrc
+ln -fv $DIR/.tmux.conf ~/.tmux.conf
 
-ln -fvs $DIR/.vim ~/.vim
-ln -fvs $DIR/.vimrc ~/.vimrc
-ln -fvs $DIR/.zshrc ~/.zshrc
+# Git
+git config --global color.ui true
+git config --global format.pretty oneline

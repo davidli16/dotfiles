@@ -4,6 +4,9 @@ promptinit
 
 prompt off
 
+# Commands
+alias dev3="ssh -Y -i ~/.ssh/id_rsa davidli@dev3.dev.meebo.com"
+
 #autojump
 #Copyright Joel Schaerer 2008, 2009
 #This file is part of autojump
