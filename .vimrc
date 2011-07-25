@@ -51,6 +51,10 @@ nmap <Leader>f :FufMruFile<CR>
 nmap <Leader>d :FufDir<CR>
 nmap <Leader>t :NERDTree<CR>
 nnoremap <Leader>u :GundoToggle<CR>
+nmap [ <C-w>h
+nmap ] <C-w>l
+nmap { <C-w>j
+nmap } <C-w>k
 
 " Enable features
 call pathogen#runtime_append_all_bundles()
