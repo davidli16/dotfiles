@@ -45,6 +45,7 @@ set shiftwidth=2
 let mapleader = ","
 
 nmap ; :
+imap ;; <Esc>
 nmap \ :FufCoverageFile<CR>
 nmap <Leader>f :FufMruFile<CR>
 nmap <Leader>d :FufDir<CR>
