@@ -2,14 +2,14 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
-prompt off
+export PS1="[%{$fg_bold[green]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}] %{$reset_color%}"
 
 # Path
 export PATH="~/bin:$HOME/bin:$PATH"
 export PYTHONPATH="$HOME/bin"
 
 # Commands
-alias ls="ls --color"
+alias ls="ls -F --color"
 alias grep="grep --color"
 alias dev3="ssh -Y -i ~/.ssh/id_rsa davidli@dev3.dev.meebo.com"
 
