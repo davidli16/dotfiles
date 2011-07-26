@@ -16,3 +16,12 @@ export PYTHONPATH="$HOME/bin"
 alias ls="ls -F"
 alias grep="grep --color"
 alias dev3="ssh -Y -i ~/.ssh/id_rsa davidli@dev3.dev.meebo.com"
+
+source /etc/profile
+
+#OMZSH
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="mrtazz"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
