@@ -17,6 +17,13 @@ alias ls="ls -F"
 alias grep="grep --color"
 alias dev3="ssh -Y -i ~/.ssh/id_rsa davidli@dev3.dev.meebo.com"
 
+# Features
+setopt share_history
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.history
+setopt APPEND_HISTORY
+
 source /etc/profile
 
 #OMZSH
