@@ -25,10 +25,3 @@ HISTFILE=~/.history
 setopt APPEND_HISTORY
 
 source /etc/profile
-
-#OMZSH
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="davidli"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
-
