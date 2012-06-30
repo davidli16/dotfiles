@@ -1,7 +1,8 @@
 " Enable features
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 let g:fuf_modesDisable = ['mrucmd']
+let g:Powerline_symbols = 'fancy'
 filetype plugin on
 
 " Basic Commands
@@ -53,8 +54,10 @@ set undoreload=10000
 
 " Text Formatting and Layout
 set nowrap
+set expandtab
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set encoding=utf-8
 
 " Key Bindings
