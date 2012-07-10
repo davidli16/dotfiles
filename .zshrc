@@ -43,7 +43,13 @@ fi
 
 # Start TMUX at launch
 if [[ -z "$TMUX" ]]; then
-  tmux att
+  # if no session is started, start a new session
+  tmux attach
+
+  # when quitting tmux, try to attach
+  while [[ -z ${TMUX} ]]; do
+    tmux attach || break
+  done
 fi
 
 export PS1="[%{$fg_bold[green]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}] %{$reset_color%}"
