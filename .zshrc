@@ -1,12 +1,13 @@
 fpath=(~/.zsh/functions $fpath)
 
+# Environment
+export CLICOLOR="YES"
+export TERM="screen-256color"
+
 autoload -U compinit promptinit colors
 compinit
 promptinit
 colors
-
-# Environment
-export CLICOLOR="YES"
 
 # Path
 export PATH="$HOME/bin:$PATH"
@@ -29,6 +30,7 @@ HISTFILE=~/.history
 setopt APPEND_HISTORY
 
 source /etc/profile
+source ~/.bash_aliases
 source ~/bin/autojump.zsh
 
 # Start TMUX at launch
