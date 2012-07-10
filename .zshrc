@@ -29,9 +29,17 @@ HISTSIZE=1000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
 
-source /etc/profile
-source ~/.bash_aliases
-source ~/bin/autojump.zsh
+if [[ -f /etc/profile ]]; then
+  source /etc/profile
+fi
+
+if [[ -f ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
+
+if [[ -f ~/bin/autojump.zsh ]]; then
+  source ~/bin/autojump.zsh
+fi
 
 # Start TMUX at launch
 if [[ -z "$TMUX" ]]; then
