@@ -18,6 +18,7 @@ set noswapfile
 set nowb
 set nobackup
 set ttyfast
+set pastetoggle=<f8>
 
 " VIM User Interface
 set backspace=indent,eol,start
