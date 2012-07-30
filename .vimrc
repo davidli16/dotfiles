@@ -39,6 +39,10 @@ set wildmenu
 
 syntax on
 
+" Folding
+set foldmethod=indent
+set nofoldenable
+
 " Searching
 set ignorecase
 set smartcase
@@ -87,5 +91,6 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+nnoremap <space> <leader>zA
 
 color jellybeans

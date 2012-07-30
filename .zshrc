@@ -41,6 +41,10 @@ if [[ -f ~/bin/autojump.zsh ]]; then
   source ~/bin/autojump.zsh
 fi
 
+if [[ -f ~/.autojump/etc/profile.d/autojump.zsh ]]; then
+  source ~/.autojump/etc/profile.d/autojump.zsh
+fi
+
 # Start TMUX at launch
 if [[ -z "$TMUX" ]]; then
   # if no session is started, start a new session
