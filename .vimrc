@@ -13,7 +13,6 @@ set smartindent
 set guioptions-=T
 set ruler
 set nu
-set mouse=a
 set noswapfile
 set nowb
 set nobackup
@@ -28,7 +27,7 @@ set list
 set nostartofline
 set number
 set listchars=tab:·-,trail:-
-set mouse=a
+" set mouse=a
 set relativenumber
 set completeopt=longest,menuone
 set cursorline
@@ -40,8 +39,8 @@ set wildmenu
 syntax on
 
 " Folding
-set foldmethod=indent
-set nofoldenable
+" set foldmethod=indent
+" set nofoldenable
 
 " Searching
 set ignorecase
@@ -55,7 +54,7 @@ set hlsearch
 set undodir=/tmp
 set undofile
 set undolevels=1000
-set undoreload=10000
+set undoreload=1000
 
 " Text Formatting and Layout
 set nowrap

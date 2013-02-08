@@ -24,8 +24,8 @@ alias vi="vim -X"
 
 # Features
 setopt share_history
-SAVEHIST=1000
-HISTSIZE=1000
+SAVEHIST=10000
+HISTSIZE=10000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
 
@@ -45,17 +45,26 @@ if [[ -f ~/.autojump/etc/profile.d/autojump.zsh ]]; then
   source ~/.autojump/etc/profile.d/autojump.zsh
 fi
 
+if [[ -f /etc/bash_completion.d/g4d ]]; then
+  source /etc/bash_completion.d/g4d
+fi
+
 # Start TMUX at launch
 if [[ -z "$TMUX" ]]; then
   # if no session is started, start a new session
-  tmux attach || tmux new; exit
+  tmux attach -d || tmux new; exit
 
   # when quitting tmux, try to attach
   while [[ -z ${TMUX} ]]; do
-    (tmux has-session && tmux attach) || break
+    (tmux has-session && tmux attach -d) || break
   done
 fi
 
+parse_git_branch () {
+  git branch 2> /dev/null | grep "*" | sed -e 's/* \(.*\)/ (\1)/g'
+}
+
 export PROMPT="
-%{$fg_bold[green]%}%%%{$reset_color%} "
-export RPROMPT=" %{$fg_bold[blue]%}%~%{$reset_color%}"
+%{$fg_bold[green]%}%%%{$reset_color%} %~
+  "
+export RPROMPT=" %{$fg_bold[blue]%}$(parse_git_branch)%{$reset_color%}"
