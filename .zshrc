@@ -4,10 +4,23 @@ fpath=(~/.zsh/functions $fpath)
 export CLICOLOR="YES"
 export TERM="screen-256color"
 
-autoload -U compinit promptinit colors
+autoload -Uz compinit promptinit colors vcs_info
 compinit
 promptinit
 colors
+
+zstyle ':vcs_info:*' stagedstr '%F{28}●'
+zstyle ':vcs_info:*' unstagedstr '%F{11}●'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' enable git svn
+precmd() {
+  if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+      zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{blue}]'
+  } else {
+      zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
+  }
+  vcs_info
+}
 
 # Path
 export PATH="$HOME/bin:$PATH"
@@ -23,6 +36,7 @@ alias egrep='egrep --color=auto'
 alias vi="vim -X"
 
 # Features
+setopt prompt_subst
 setopt share_history
 SAVEHIST=10000
 HISTSIZE=10000
@@ -60,11 +74,7 @@ if [[ -z "$TMUX" ]]; then
   done
 fi
 
-parse_git_branch () {
-  git branch 2> /dev/null | grep "*" | sed -e 's/* \(.*\)/ (\1)/g'
-}
-
-export PROMPT="
+export PROMPT='
 %{$fg_bold[green]%}%%%{$reset_color%} %~
-  "
-export RPROMPT=" %{$fg_bold[blue]%}$(parse_git_branch)%{$reset_color%}"
+  '
+export RPROMPT=' %{$fg_bold[blue]%}${vcs_info_msg_0_}%{$reset_color%}'
