@@ -1,26 +1,6 @@
 " Enable features
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-let g:fuf_modesDisable = ['mrucmd']
-let g:Powerline_symbols = 'compatible'
+filetype off
 filetype plugin indent on
-
-Bundle 'gmarik/vundle'
-Bundle 'ack.vim'
-Bundle 'gundo.vim'
-Bundle 'nerdcommenter'
-Bundle 'nerdtree'
-Bundle 'numbers.vim'
-Bundle 'snipmate.vim'
-Bundle 'vim-fugitive'
-Bundle 'vim-fuzzyfinder'
-Bundle 'vim-l9'
-Bundle 'vim-powerline'
-Bundle 'vim-repeat'
-Bundle 'vim-supertab'
-Bundle 'vim-surround'
-Bundle 'vim-vividchalk'
-Bundle 'YouCompleteMe'
 
 " Basic Commands
 set autoread
@@ -89,14 +69,7 @@ let mapleader = ","
 
 nmap ; :
 imap jj <esc>
-nmap \ :FufCoverageFile<cr>
-nmap <leader>f :FufMruFile<cr>
-nmap <leader>d :FufDir<cr>
-nmap <leader>t :NERDTree<cr>
-nmap <leader>a :Ack 
-nmap <leader>c <plug>NERDCommenterToggle
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
-nnoremap <leader>u :GundoToggle<cr>
 nnoremap [ <c-w>h
 nnoremap ] <c-w>l
 nnoremap { <c-w>j
@@ -116,3 +89,39 @@ color jellybeans
 hi ColorColumn ctermbg=DarkGray guibg=DarkGray
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%101v.\+/
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'ack.vim'
+nmap <leader>a :Ack 
+
+Bundle 'gundo.vim'
+nnoremap <leader>u :GundoToggle<cr>
+
+Bundle 'nerdcommenter'
+nmap <leader>c <plug>NERDCommenterToggle
+
+Bundle 'nerdtree'
+nmap <leader>t :NERDTree<cr>
+
+Bundle 'numbers.vim'
+Bundle 'snipmate.vim'
+Bundle 'vim-fugitive'
+
+Bundle 'vim-fuzzyfinder'
+Bundle 'vim-l9'
+let g:fuf_modesDisable = ['mrucmd']
+nmap \ :FufCoverageFile<cr>
+nmap <leader>f :FufMruFile<cr>
+nmap <leader>d :FufDir<cr>
+
+Bundle 'vim-powerline'
+let g:Powerline_symbols = 'compatible'
+
+Bundle 'vim-repeat'
+Bundle 'vim-supertab'
+Bundle 'vim-surround'
+Bundle 'vim-vividchalk'
+Bundle 'YouCompleteMe'
