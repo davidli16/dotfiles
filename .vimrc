@@ -28,6 +28,8 @@ set nostartofline
 set number
 set listchars=tab:·-,trail:-
 " set mouse=a
+set splitright
+set splitbelow
 set relativenumber
 set completeopt=longest,menuone
 set cursorline
@@ -35,6 +37,7 @@ set showcmd
 set scrolloff=5
 set sidescrolloff=5
 set wildmenu
+set colorcolumn=81
 
 syntax on
 
@@ -68,7 +71,7 @@ set encoding=utf-8
 let mapleader = ","
 
 nmap ; :
-imap ;; <esc>
+imap jj <esc>
 nmap \ :FufCoverageFile<cr>
 nmap <leader>f :FufMruFile<cr>
 nmap <leader>d :FufDir<cr>
@@ -93,3 +96,6 @@ nnoremap <right> <nop>
 nnoremap <space> <leader>zA
 
 color jellybeans
+hi ColorColumn ctermbg=DarkGray guibg=DarkGray
+hi OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%101v.\+/
