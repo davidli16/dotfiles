@@ -1,9 +1,26 @@
 " Enable features
-call pathogen#infect()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 let g:fuf_modesDisable = ['mrucmd']
-let g:Powerline_symbols = 'fancy'
-filetype plugin on
+let g:Powerline_symbols = 'compatible'
+filetype plugin indent on
+
+Bundle 'gmarik/vundle'
+Bundle 'ack.vim'
+Bundle 'gundo.vim'
+Bundle 'nerdcommenter'
+Bundle 'nerdtree'
+Bundle 'numbers.vim'
+Bundle 'snipmate.vim'
+Bundle 'vim-fugitive'
+Bundle 'vim-fuzzyfinder'
+Bundle 'vim-l9'
+Bundle 'vim-powerline'
+Bundle 'vim-repeat'
+Bundle 'vim-supertab'
+Bundle 'vim-surround'
+Bundle 'vim-vividchalk'
+Bundle 'YouCompleteMe'
 
 " Basic Commands
 set autoread
