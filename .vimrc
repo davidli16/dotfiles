@@ -118,8 +118,6 @@ nmap <leader>f :FufMruFile<cr>
 nmap <leader>d :FufDir<cr>
 
 Bundle 'vim-powerline'
-let g:Powerline_symbols = 'compatible'
-
 Bundle 'vim-repeat'
 Bundle 'vim-supertab'
 Bundle 'vim-surround'
