@@ -1,8 +1,23 @@
 fpath=(~/.zsh/functions $fpath)
 
+if [[ -f /etc/profile ]]; then
+  source /etc/profile
+fi
+
+if [[ -f ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
+
+if [[ -f /etc/bash_completion.d/g4d ]]; then
+  source /etc/bash_completion.d/g4d
+fi
+
+# Fasd
+eval "$(fasd --init auto)"
+
 # Environment
 export CLICOLOR="YES"
-export TERM="screen-256color"
+export TERM="xterm-256color"
 
 autoload -Uz compinit promptinit colors vcs_info
 compinit
@@ -13,13 +28,23 @@ zstyle ':vcs_info:*' stagedstr '%F{28}●'
 zstyle ':vcs_info:*' unstagedstr '%F{11}●'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git svn
+
+git_branch() {
+  BRANCH_REFS=$(git symbolic-ref HEAD 2>/dev/null) || return
+  GIT_BRANCH="${BRANCH_REFS#refs/heads/}"
+  [ -n "$GIT_BRANCH" ] && echo "$GIT_BRANCH"
+}
+
 precmd() {
+  echo -ne "\e]1;${PWD//*\//} $(git_branch)\a"
+
   if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
       zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{blue}]'
   } else {
       zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
   }
   vcs_info
+  tmux rename-window "[$(git_branch)]"
 }
 
 # Path
@@ -42,26 +67,6 @@ SAVEHIST=10000
 HISTSIZE=10000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
-
-if [[ -f /etc/profile ]]; then
-  source /etc/profile
-fi
-
-if [[ -f ~/.bash_aliases ]]; then
-  source ~/.bash_aliases
-fi
-
-if [[ -f ~/bin/autojump.zsh ]]; then
-  source ~/bin/autojump.zsh
-fi
-
-if [[ -f ~/.autojump/etc/profile.d/autojump.zsh ]]; then
-  source ~/.autojump/etc/profile.d/autojump.zsh
-fi
-
-if [[ -f /etc/bash_completion.d/g4d ]]; then
-  source /etc/bash_completion.d/g4d
-fi
 
 # Start TMUX at launch
 if [[ -z "$TMUX" ]]; then
