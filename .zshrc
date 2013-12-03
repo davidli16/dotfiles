@@ -36,15 +36,17 @@ git_branch() {
 }
 
 precmd() {
-  echo -ne "\e]1;${PWD//*\//} $(git_branch)\a"
-
   if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
       zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{blue}]'
   } else {
       zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
   }
   vcs_info
-  tmux rename-window "[$(git_branch)]"
+  printf "\033k[$(git_branch)]\033\\"
+}
+
+preexec() {
+  printf "\033k[$(git_branch)*]\033\\"
 }
 
 # Path
