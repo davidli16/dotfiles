@@ -1,75 +1,74 @@
-" Enable features
+" === Enable features ===
 filetype off
 filetype plugin indent on
 
-" Basic Commands
-set autoread
-set nocompatible
+" === Basic Commands ===
 set autoindent
-set smartindent
+set autoread
 set guioptions-=T
-set ruler
-set nu
+set nobackup
+set nocompatible
 set noswapfile
 set nowb
-set nobackup
+set nu
+set ruler
+set smartindent
 set ttyfast
 set pastetoggle=<f8>
 
-" VIM User Interface
-set backspace=indent,eol,start
-set laststatus=2
-set matchtime=5
-set list
-set nostartofline
-set number
-set listchars=tab:·-,trail:-
+" === VIM User Interface ===
 " set mouse=a
-set splitright
-set splitbelow
-set relativenumber
+set backspace=indent,eol,start
+set colorcolumn=81
 set completeopt=longest,menuone
 set cursorline
-set showcmd
+set laststatus=2
+set list
+set listchars=tab:·-,trail:-
+set matchtime=5
+set nostartofline
+set number
+set relativenumber
 set scrolloff=5
+set showcmd
 set sidescrolloff=5
+set splitbelow
+set splitright
 set wildmenu
-set colorcolumn=81
 
 syntax on
 
-" Folding
+" === Folding ===
 " set foldmethod=indent
 " set nofoldenable
 
-" Searching
-set ignorecase
-set smartcase
+" === Searching ===
 set gdefault
+set hlsearch
+set ignorecase
 set incsearch
 set showmatch
-set hlsearch
+set smartcase
 
-" History
+" === History ===
 set undodir=/tmp
 set undofile
-set undolevels=1000
-set undoreload=1000
+" set undolevels=1000
+" set undoreload=1000
 
-" Text Formatting and Layout
-set nowrap
+" === Text Formatting and Layout ===
 set expandtab
-set tabstop=2
+set nowrap
 set shiftwidth=2
 set softtabstop=2
+set tabstop=2
 set encoding=utf-8
 
-" Key Bindings
+" === Key Bindings ===
 let mapleader = ","
 
 nmap ; :
 imap jj <esc>
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 nnoremap [ <c-w>h
 nnoremap ] <c-w>l
 nnoremap { <c-w>j
@@ -78,18 +77,28 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap <tab> %
 vnoremap <tab> %
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+" Hides search highlights
 nnoremap <leader><space> :noh<cr>
+" Sorts the lines
+nnoremap <leader>s :sort<cr>
+" Disable arrow nav outside of insert mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <space> <leader>zA
 
+" === Styles ===
+set t_Co=256
 color jellybeans
-hi ColorColumn ctermbg=DarkGray guibg=DarkGray
+hi ColorColumn ctermbg=234 guibg=234
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
+hi VertSplit ctermbg=237 guibg=237
 match OverLength /\%101v.\+/
+set fillchars+=vert:\ 
 
+" === Plugins ===
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -101,7 +110,7 @@ Bundle 'gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
 Bundle 'nerdcommenter'
-nmap <leader>c <plug>NERDCommenterToggle
+nmap <leader>c <plug>NERDCommenterToggle<cr>
 
 Bundle 'nerdtree'
 nmap <leader>t :NERDTree<cr>
@@ -118,8 +127,9 @@ nmap <leader>f :FufMruFile<cr>
 nmap <leader>d :FufDir<cr>
 
 Bundle 'vim-powerline'
+let g:Powerline_symbols = 'fancy'
+
 Bundle 'vim-repeat'
-Bundle 'vim-supertab'
 Bundle 'vim-surround'
 Bundle 'vim-vividchalk'
-Bundle 'YouCompleteMe'
+" Bundle 'YouCompleteMe'
