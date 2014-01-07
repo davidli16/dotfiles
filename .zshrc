@@ -15,6 +15,7 @@ fi
 # Environment
 export CLICOLOR="YES"
 export TERM="xterm-256color"
+export EDITOR="vim"
 
 # Start TMUX at launch
 if (( $+commands[tmux] )); then
