@@ -110,7 +110,6 @@ Bundle 'gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
 Bundle 'nerdcommenter'
-nmap <leader>c <plug>NERDCommenterToggle<cr>
 
 Bundle 'nerdtree'
 nmap <leader>t :NERDTree<cr>
