@@ -72,23 +72,23 @@ export PROMPT='
 export RPROMPT=' %{$fg_bold[blue]%}${vcs_info_msg_0_}%{$reset_color%}'
 
 # Lifecycle
-precmd() {
-  if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-      zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{blue}]'
-  } else {
-      zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
-  }
-  vcs_info
-  printf "\033k[$(git_branch)]\033\\"
-}
+#precmd() {
+  #if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+      #zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{blue}]'
+  #} else {
+      #zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
+  #}
+  #vcs_info
+  #printf "\033k[$(git_branch)]\033\\"
+#}
 
-preexec() {
-  printf "\033k[$(git_branch)*]\033\\"
-}
+#preexec() {
+  #printf "\033k[$(git_branch)*]\033\\"
+#}
 
-# Utilities
-git_branch() {
-  BRANCH_REFS=$(git symbolic-ref HEAD 2>/dev/null) || return
-  GIT_BRANCH="${BRANCH_REFS#refs/heads/}"
-  [ -n "$GIT_BRANCH" ] && echo "$GIT_BRANCH"
-}
+## Utilities
+#git_branch() {
+  #BRANCH_REFS=$(git symbolic-ref HEAD 2>/dev/null) || return
+  #GIT_BRANCH="${BRANCH_REFS#refs/heads/}"
+  #[ -n "$GIT_BRANCH" ] && echo "$GIT_BRANCH"
+#}
