@@ -111,8 +111,7 @@ nnoremap <leader>u :GundoToggle<cr>
 
 Bundle 'nerdcommenter'
 
-Bundle 'nerdtree'
-nmap <leader>t :NERDTree<cr>
+Bundle 'vim-vinegar'
 
 Bundle 'numbers.vim'
 Bundle 'snipmate.vim'
