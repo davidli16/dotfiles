@@ -43,7 +43,7 @@ colors
 zstyle ':vcs_info:*' stagedstr '%F{28}●'
 zstyle ':vcs_info:*' unstagedstr '%F{11}●'
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' enable git
 
 # Path
 export PATH="$HOME/bin:$PATH"
@@ -64,31 +64,33 @@ setopt share_history
 SAVEHIST=10000
 HISTSIZE=10000
 HISTFILE=~/.history
-setopt APPEND_HISTORY
 
 export PROMPT='
 %{$fg_bold[green]%}%%%{$reset_color%} %~
   '
 export RPROMPT=' %{$fg_bold[blue]%}${vcs_info_msg_0_}%{$reset_color%}'
 
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 # Lifecycle
-#precmd() {
-  #if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-      #zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{blue}]'
-  #} else {
-      #zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
-  #}
-  #vcs_info
-  #printf "\033k[$(git_branch)]\033\\"
-#}
+precmd() {
+  if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+      zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{blue}]'
+  } else {
+      zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
+  }
+  vcs_info
+  printf "\033k[$(git_branch)]\033\\"
+}
 
-#preexec() {
-  #printf "\033k[$(git_branch)*]\033\\"
-#}
+preexec() {
+  printf "\033k[$(git_branch)*]\033\\"
+}
 
-## Utilities
-#git_branch() {
-  #BRANCH_REFS=$(git symbolic-ref HEAD 2>/dev/null) || return
-  #GIT_BRANCH="${BRANCH_REFS#refs/heads/}"
-  #[ -n "$GIT_BRANCH" ] && echo "$GIT_BRANCH"
-#}
+# Utilities
+git_branch() {
+  BRANCH_REFS=$(git symbolic-ref HEAD 2>/dev/null) || return
+  GIT_BRANCH="${BRANCH_REFS#refs/heads/}"
+  [ -n "$GIT_BRANCH" ] && echo "$GIT_BRANCH"
+}
