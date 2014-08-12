@@ -124,8 +124,7 @@ nmap \ :FufCoverageFile<cr>
 nmap <leader>f :FufMruFile<cr>
 nmap <leader>d :FufDir<cr>
 
-Bundle 'vim-powerline'
-let g:Powerline_symbols = 'fancy'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Bundle 'vim-repeat'
 Bundle 'vim-surround'
