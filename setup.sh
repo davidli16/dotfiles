@@ -8,6 +8,7 @@ ln -fsv $DIR/.tmux.conf ~/.tmux.conf
 
 # Git
 git config --global user.name "David Li"
+git config --global user.email "davidli@cs.stanford.edu"
 git config --global color.ui true
 git config --global format.pretty oneline
 git submodule init
