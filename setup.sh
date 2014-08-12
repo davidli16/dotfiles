@@ -4,6 +4,7 @@ ln -fsv $DIR/.vim ~
 ln -fsv $DIR/.vimrc ~/.vimrc
 ln -fsv $DIR/.zsh ~/.zsh
 ln -fsv $DIR/.zshrc ~/.zshrc
+ln -fsv $DIR/.config ~/.config
 ln -fsv $DIR/.tmux.conf ~/.tmux.conf
 
 # Git
