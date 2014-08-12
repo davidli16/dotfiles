@@ -1,17 +1,3 @@
-fpath=(~/.zsh/functions $fpath)
-
-if [[ -f /etc/profile ]]; then
-  source /etc/profile
-fi
-
-if [[ -f ~/.bash_aliases ]]; then
-  source ~/.bash_aliases
-fi
-
-if [[ -f /etc/bash_completion.d/g4d ]]; then
-  source /etc/bash_completion.d/g4d
-fi
-
 # Environment
 export CLICOLOR="YES"
 export TERM="xterm-256color"
