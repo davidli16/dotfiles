@@ -11,6 +11,7 @@ git config --global user.name "David Li"
 git config --global user.email "davidli@cs.stanford.edu"
 git config --global color.ui true
 git config --global format.pretty oneline
+git config --global push.default simple
 git submodule init
 git submodule sync
 git submodule update
