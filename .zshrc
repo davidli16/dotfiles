@@ -32,7 +32,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git
 
 # Path
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin::$PATH"
 export PYTHONPATH="$HOME/bin:$PYTHONPATH"
 
 # Commands
