@@ -99,34 +99,36 @@ match OverLength /\%101v.\+/
 set fillchars+=vert:\ 
 
 " === Plugins ===
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
-Bundle 'ack.vim'
+Plugin 'ack.vim'
 nmap <leader>a :Ack 
 
-Bundle 'gundo.vim'
+Plugin 'gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
-Bundle 'nerdcommenter'
+Plugin 'nerdcommenter'
 
-Bundle 'vim-vinegar'
+Plugin 'vim-vinegar'
 
-Bundle 'numbers.vim'
-Bundle 'snipmate.vim'
-Bundle 'vim-fugitive'
+Plugin 'numbers.vim'
+Plugin 'snipmate.vim'
+Plugin 'vim-fugitive'
 
-Bundle 'vim-fuzzyfinder'
-Bundle 'vim-l9'
+Plugin 'vim-fuzzyfinder'
+Plugin 'vim-l9'
 let g:fuf_modesDisable = ['mrucmd']
 nmap \ :FufCoverageFile<cr>
 nmap <leader>f :FufMruFile<cr>
 nmap <leader>d :FufDir<cr>
 
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-Bundle 'vim-repeat'
-Bundle 'vim-surround'
-Bundle 'vim-vividchalk'
-" Bundle 'YouCompleteMe'
+Plugin 'vim-repeat'
+Plugin 'vim-surround'
+Plugin 'vim-vividchalk'
+Plugin 'YouCompleteMe'
+
+call vundle#end()
