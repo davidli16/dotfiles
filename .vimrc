@@ -104,7 +104,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'kien/ctrlp.vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -112,6 +111,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+nmap \ :FufCoverageFile<cr>
+nmap <leader>f :FufMruFile<cr>
+nmap <leader>d :FufDir<cr>
 
 Plugin 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
