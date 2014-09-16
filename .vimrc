@@ -90,8 +90,6 @@ nnoremap <right> <nop>
 nnoremap <space> <leader>zA
 
 " === Styles ===
-set t_Co=256
-color jellybeans
 hi ColorColumn ctermbg=234 guibg=234
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
 hi VertSplit ctermbg=237 guibg=237
@@ -101,34 +99,23 @@ set fillchars+=vert:\
 " === Plugins ===
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 
-Plugin 'ack.vim'
-nmap <leader>a :Ack 
-
-Plugin 'gundo.vim'
+Plugin 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
-Plugin 'nerdcommenter'
-
-Plugin 'vim-vinegar'
-
-Plugin 'numbers.vim'
-Plugin 'snipmate.vim'
-Plugin 'vim-fugitive'
-
-Plugin 'vim-fuzzyfinder'
-Plugin 'vim-l9'
-let g:fuf_modesDisable = ['mrucmd']
-nmap \ :FufCoverageFile<cr>
-nmap <leader>f :FufMruFile<cr>
-nmap <leader>d :FufDir<cr>
-
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-Plugin 'vim-repeat'
-Plugin 'vim-surround'
-Plugin 'vim-vividchalk'
-Plugin 'YouCompleteMe'
+Plugin 'mileszs/ack.vim'
+nmap <leader>a :Ack 
 
 call vundle#end()
