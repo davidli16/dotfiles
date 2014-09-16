@@ -34,6 +34,7 @@ zstyle ':vcs_info:*' enable git
 # Path
 export PATH="$HOME/bin:/usr/local/bin::$PATH"
 export PYTHONPATH="$HOME/bin:$PYTHONPATH"
+export ANDROID_HOME="/usr/local/opt/android-sdk"
 
 # Commands
 alias ll='ls -alF'
