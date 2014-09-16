@@ -67,8 +67,9 @@ set encoding=utf-8
 " === Key Bindings ===
 let mapleader = ","
 
-nmap ; :
-imap jj <esc>
+nnoremap ; :
+inoremap jk <esc>
+inoremap <esc> <nop>
 nnoremap [ <c-w>h
 nnoremap ] <c-w>l
 nnoremap { <c-w>j
@@ -114,6 +115,7 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'L9'
 Plugin 'FuzzyFinder'
+let g:fuf_modesDisable = ['mrucmd']
 nmap \ :FufCoverageFile<cr>
 nmap <leader>f :FufMruFile<cr>
 nmap <leader>d :FufDir<cr>
