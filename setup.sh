@@ -15,3 +15,7 @@ git config --global push.default simple
 git submodule init
 git submodule sync
 git submodule update
+
+# Vim
+vim +PluginInstall +qall
+vim +PluginUpdate +qall
