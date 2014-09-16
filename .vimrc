@@ -36,7 +36,7 @@ set splitbelow
 set splitright
 set wildmenu
 
-syntax on
+syntax enable
 
 " === Folding ===
 " set foldmethod=indent
@@ -90,6 +90,8 @@ nnoremap <right> <nop>
 nnoremap <space> <leader>zA
 
 " === Styles ===
+set t_Co=256
+color jellybeans
 hi ColorColumn ctermbg=234 guibg=234
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
 hi VertSplit ctermbg=237 guibg=237
@@ -100,9 +102,8 @@ set fillchars+=vert:\
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/powerline'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'scrooloose/nerdcommenter'
