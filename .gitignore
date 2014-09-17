@@ -1,6 +1,8 @@
 .netrwhist
 functions/
 
+.vim/bundle
+
 ### MAC ###
 
 .DS_Store

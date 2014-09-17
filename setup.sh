@@ -18,4 +18,3 @@ git submodule update
 
 # Vim
 vim +PluginInstall +qall
-vim +PluginUpdate +qall
