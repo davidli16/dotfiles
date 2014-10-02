@@ -3,19 +3,6 @@ export CLICOLOR="YES"
 export TERM="xterm-256color"
 export EDITOR="vim"
 
-# Start TMUX at launch
-if (( $+commands[tmux] )); then
-  if [[ -z "$TMUX" ]]; then
-    # if no session is started, start a new session
-    tmux attach -d || tmux new; exit
-
-    # when quitting tmux, try to attach
-    while [[ -z ${TMUX} ]]; do
-      (tmux has-session && tmux attach -d) || break
-    done
-  fi
-fi
-
 # Fasd
 if (( $+commands[fasd] )); then
   fasd --init auto
@@ -44,6 +31,16 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias vi="vim -X"
+
+# fasd
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias j='fasd_cd -d'     # cd, same functionality as j in autojump
+alias jj='fasd_cd -d -i' # cd with interactive selection
 
 # Features
 setopt prompt_subst
