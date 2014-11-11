@@ -107,7 +107,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+nmap <leader>t :NERDTreeToggle<cr>
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
