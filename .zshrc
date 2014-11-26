@@ -5,7 +5,7 @@ export EDITOR="vim"
 
 # Fasd
 if (( $+commands[fasd] )); then
-  fasd --init auto >> /dev/null
+  eval "$(fasd --init auto)"
 fi
 
 autoload -Uz compinit promptinit colors vcs_info
