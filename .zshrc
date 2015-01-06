@@ -65,11 +65,7 @@ precmd() {
       zstyle ':vcs_info:*' formats ' [%F{green}%b%c%u%F{red}●%F{blue}]'
   }
   vcs_info
-  printf "\033k[$(git_branch)]\033\\"
-}
-
-preexec() {
-  printf "\033k[$(git_branch)*]\033\\"
+  printf "\033k${PWD/#${HOME}/~}\033\\"
 }
 
 # Utilities
