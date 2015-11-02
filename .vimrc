@@ -59,9 +59,9 @@ set undofile
 " === Text Formatting and Layout ===
 set expandtab
 set nowrap
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set encoding=utf-8
 
 " === Key Bindings ===
@@ -98,6 +98,13 @@ hi VertSplit ctermbg=237 guibg=237
 match OverLength /\%101v.\+/
 set fillchars+=vert:\ 
 
+" === Ignore ===
+
+set wildignore+=*.pyc
+set wildignore+=*/out/*,*/build/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
 " === Plugins ===
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -113,17 +120,20 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
+Plugin 'kien/ctrlp.vim'
+nmap \ :CtrlP<cr>
+nmap <leader>f :CtrlPMRU<cr>
+
 Plugin 'L9'
-Plugin 'FuzzyFinder'
-let g:fuf_modesDisable = ['mrucmd']
-nmap \ :FufCoverageFile<cr>
-nmap <leader>f :FufMruFile<cr>
-nmap <leader>d :FufDir<cr>
 
 Plugin 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
 Plugin 'mileszs/ack.vim'
 nmap <leader>a :Ack 
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 call vundle#end()
