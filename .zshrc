@@ -19,9 +19,10 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git
 
 # Path
-export PATH="$HOME/bin:/usr/local/bin::$PATH"
-export PYTHONPATH="$HOME/bin:$PYTHONPATH"
-export ANDROID_HOME="/usr/local/opt/android-sdk"
+export PATH=${HOME}/bin:/usr/local/bin:${PATH}
+export PYTHONPATH=${HOME}/bin:$PYTHONPATH
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 # Commands
 alias ll='ls -alF'
