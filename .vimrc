@@ -104,6 +104,7 @@ set wildignore+=*.pyc
 set wildignore+=*/out/*,*/build/*
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+set wildignore+=*/node_modules/*
 
 " === Plugins ===
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -112,6 +113,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'myusuf3/numbers.vim'
+
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 nmap <leader>t :NERDTreeToggle<cr>
@@ -123,6 +125,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 nmap \ :CtrlP<cr>
 nmap <leader>f :CtrlPMRU<cr>
+nmap <leader>C :CtrlPClearCache<cr>
 
 Plugin 'L9'
 
