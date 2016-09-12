@@ -13,6 +13,8 @@ git config --global color.ui true
 git config --global format.pretty oneline
 git config --global push.default simple
 git config --global pull.rebase true
+git config --global alias.a 'commit -a --amend'
+git config --global alias.l 'log --oneline --graph'
 git submodule init
 git submodule sync
 git submodule update
