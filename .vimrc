@@ -92,9 +92,9 @@ nnoremap <space> <leader>zA
 " === Styles ===
 set t_Co=256
 color jellybeans
-hi ColorColumn ctermbg=234 guibg=234
+hi ColorColumn ctermbg=234 guibg=#1c1c1c
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
-hi VertSplit ctermbg=237 guibg=237
+hi VertSplit ctermbg=237 guibg=#3a3a3a
 match OverLength /\%101v.\+/
 set fillchars+=vert:\ 
 
