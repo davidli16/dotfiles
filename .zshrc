@@ -9,7 +9,7 @@ if (( $+commands[fasd] )); then
 fi
 
 autoload -Uz compinit promptinit colors vcs_info
-compinit
+compinit -i
 promptinit
 colors
 
