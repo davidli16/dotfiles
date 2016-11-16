@@ -117,6 +117,11 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 nmap <leader>t :NERDTreeToggle<cr>
+" Start NERDTree on launch
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+" Close if only NERDTree is open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
