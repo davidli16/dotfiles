@@ -14,7 +14,9 @@ git config --global format.pretty oneline
 git config --global push.default simple
 git config --global pull.rebase true
 git config --global alias.a 'commit -a --amend'
+git config --global alias.c 'commit -m'
 git config --global alias.l 'log --oneline --graph'
+git config --global alias.r 'rebase -i HEAD~20'
 git submodule init
 git submodule sync
 git submodule update
