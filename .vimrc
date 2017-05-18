@@ -107,30 +107,36 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=*/node_modules/*
 
 " === Plugins ===
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+Plugin 'tpope/vim-dispatch'
+
 Plugin 'Valloric/YouCompleteMe'
+let g:ycm_auto_trigger = 0
 Plugin 'myusuf3/numbers.vim'
 
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-nmap <leader>t :NERDTreeToggle<cr>
-" Start NERDTree on launch
-autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
-" Close if only NERDTree is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 nmap \ :CtrlP<cr>
 nmap <leader>f :CtrlPMRU<cr>
 nmap <leader>C :CtrlPClearCache<cr>
+" Local working directory: Git > Subdirectory > Directory
+let g:ctrlp_workking_path_mode = 'ra'
+" Ignore gitignore files when searching
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 Plugin 'L9'
 
@@ -138,10 +144,27 @@ Plugin 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
 Plugin 'mileszs/ack.vim'
-nmap <leader>a :Ack 
+nmap <leader>a :Ack!<space>
+let g:ack_use_dispatch = 1
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+Plugin 'syntastic'
+nmap <leader>l :SyntasticCheck<cr>
+
+" Disable active linting
+let g:syntastic_mode_map = {'mode': 'passive'}
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_python_checkers = ['pylint']
 
 call vundle#end()

@@ -19,10 +19,12 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git
 
 # Path
-export PATH=${HOME}/bin:/usr/local/bin:${PATH}
 export PYTHONPATH=${HOME}/bin:$PYTHONPATH
 export ANDROID_HOME=~/Library/Android/sdk
+export YARN_BIN=$(yarn global bin)
+export PATH=${HOME}/bin:/usr/local/bin:${PATH}:${YARN_BIN}
 export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+export PATH=${PATH}:${HOME}/.cargo/env
 
 # Commands
 alias ll='ls -alF'
