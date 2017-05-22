@@ -69,10 +69,6 @@ let mapleader = ","
 
 nnoremap ; :
 inoremap jk <esc>
-nnoremap [ <c-w>h
-nnoremap ] <c-w>l
-nnoremap { <c-w>j
-nnoremap } <c-w>k
 nnoremap / /\v
 vnoremap / /\v
 nnoremap <tab> %
