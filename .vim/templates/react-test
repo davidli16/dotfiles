@@ -1,0 +1,13 @@
+import {shallow} from 'test/TestHelper';
+
+describe('<@BASENAME@>', () => {
+    function render(props, context) {
+        return shallow(@BASENAME@, {
+            ...props,
+        }, context);
+    }
+
+    it('renders', () => {
+        const wrapper = render();
+    });
+});

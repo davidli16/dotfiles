@@ -163,4 +163,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 let g:syntastic_python_checkers = ['pylint']
 
+Plugin 'noahfrederick/vim-skeleton'
+nmap <leader>t :SkelInsert!<space>
+
 call vundle#end()

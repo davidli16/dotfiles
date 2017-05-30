@@ -1,0 +1,12 @@
+import PropTypes from 'prop-types';
+import React from 'react';
+
+class @BASENAME@ extends React.PureComponent {
+    static propTypes = {
+    };
+
+    render() {
+    }
+}
+
+export default @BASENAME@;
