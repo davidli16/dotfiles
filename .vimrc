@@ -103,14 +103,13 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=*/node_modules/*
 
 " === Plugins ===
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
 
 set shell=bash
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+
+Plugin 'vim-airline/vim-airline'
 
 Plugin 'tpope/vim-dispatch'
 
