@@ -139,12 +139,12 @@ Plugin 'L9'
 Plugin 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
-Plugin 'mileszs/ack.vim'
-nmap <leader>a :Ack!<space>
-let g:ack_use_dispatch = 1
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif
+Plugin 'dyng/ctrlsf.vim'
+nmap <leader>a :CtrlSF<space>
+let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_auto_close = 0
+let g:ctrlsf_default_root = 'project'
+let g:ctrlsf_regex_pattern = 1
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
