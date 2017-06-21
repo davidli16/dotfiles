@@ -113,8 +113,8 @@ Plugin 'vim-airline/vim-airline'
 
 Plugin 'tpope/vim-dispatch'
 
-Plugin 'Valloric/YouCompleteMe'
-let g:ycm_auto_trigger = 0
+" Plugin 'Valloric/YouCompleteMe'
+" let g:ycm_auto_trigger = 0
 Plugin 'myusuf3/numbers.vim'
 
 Plugin 'scrooloose/nerdcommenter'
