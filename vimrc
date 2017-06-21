@@ -150,20 +150,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
-Plugin 'syntastic'
-nmap <leader>l :SyntasticCheck<cr>
-
-" Disable active linting
-let g:syntastic_mode_map = {'mode': 'passive'}
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
-let g:syntastic_python_checkers = ['pylint']
+Plugin 'w0rp/ale'
 
 Plugin 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>
+
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
