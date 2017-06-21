@@ -2,10 +2,10 @@
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-ln -fsv $DIR/.vim ~
-ln -fsv $DIR/.vimrc ~/.vimrc
-ln -fsv $DIR/.tmux.conf ~/.tmux.conf
-ln -fsv $DIR/config.fish ~/.config/fish/config.fish
+ln -fshv $DIR/vim ~/.vim
+ln -fshv $DIR/vimrc ~/.vimrc
+ln -fshv $DIR/tmux.conf ~/.tmux.conf
+ln -fshv $DIR/config/fish ~/.config/fish
 
 # Git
 git config --global user.name "David Li"
