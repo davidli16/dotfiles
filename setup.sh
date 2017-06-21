@@ -25,4 +25,3 @@ git submodule update
 
 # Vim
 vim +PluginInstall +qall
-.vim/bundle/YouCompleteMe/install.sh --clang-completer
