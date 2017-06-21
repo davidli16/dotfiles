@@ -13,7 +13,7 @@ setenv EDITOR vim
 alias ll 'ls -alF'
 alias la 'ls -A'
 alias l 'ls -CF'
-alias vi 'vim -X'
+alias vi 'nvim'
 alias rbpost 'rbt-log-post --parent=HEAD~1'
 
 set normal (set_color normal)
