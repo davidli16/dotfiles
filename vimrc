@@ -14,6 +14,7 @@ set nu
 set ruler
 set ttyfast
 set pastetoggle=<f8>
+set lazyredraw
 
 " === VIM User Interface ===
 " set mouse=a
