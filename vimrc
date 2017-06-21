@@ -27,7 +27,6 @@ set list
 set listchars=tab:·-,trail:-
 set matchtime=5
 set nostartofline
-set number
 set relativenumber
 set scrolloff=5
 set showcmd
@@ -110,6 +109,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'vim-airline/vim-airline'
+let g:airline#extensions#ale#enabled = 1
 
 Plugin 'tpope/vim-dispatch'
 
@@ -151,6 +151,7 @@ Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 Plugin 'w0rp/ale'
+let g:ale_sign_column_always = 1
 
 Plugin 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>
