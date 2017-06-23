@@ -12,7 +12,6 @@ set noswapfile
 set nowb
 set nu
 set ruler
-set smartindent
 set ttyfast
 set pastetoggle=<f8>
 
@@ -56,6 +55,7 @@ set undofile
 " set undoreload=1000
 
 " === Text Formatting and Layout ===
+set smartindent
 set expandtab
 set nowrap
 set shiftwidth=4
@@ -157,5 +157,7 @@ Plugin 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>
 
 Plugin 'sheerun/vim-polyglot'
+
+Plugin 'MarcWeber/vim-addon-local-vimrc'
 
 call vundle#end()
