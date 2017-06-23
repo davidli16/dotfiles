@@ -147,9 +147,10 @@ let g:ctrlsf_auto_close = 0
 let g:ctrlsf_default_root = 'project'
 let g:ctrlsf_regex_pattern = 1
 
+Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+Plugin 'maxmellon/vim-jsx-pretty'
+let g:vim_jsx_pretty_colorful_config = 1
 
 Plugin 'w0rp/ale'
 let g:ale_sign_column_always = 1
@@ -157,8 +158,7 @@ let g:ale_sign_column_always = 1
 Plugin 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>
 
-Plugin 'sheerun/vim-polyglot'
-
+" Allow for per-directory .vimrc configurations
 Plugin 'MarcWeber/vim-addon-local-vimrc'
 
 call vundle#end()
