@@ -154,6 +154,9 @@ let g:vim_jsx_pretty_colorful_config = 1
 
 Plugin 'w0rp/ale'
 let g:ale_sign_column_always = 1
+let g:ale_linters = {
+\    'python': ['pylint']
+\}
 
 Plugin 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>
