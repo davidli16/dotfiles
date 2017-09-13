@@ -88,6 +88,12 @@ nnoremap <space> <leader>zA
 " === Styles ===
 set t_Co=256
 color jellybeans
+hi Normal guibg=none ctermbg=none
+hi NonText guibg=none ctermbg=none
+hi LineNr guibg=none ctermbg=none
+hi SignColumn guibg=none ctermbg=none
+hi CursorLine guibg=none ctermbg=none
+hi Folded guibg=none ctermbg=none
 hi ColorColumn ctermbg=234 guibg=#1c1c1c
 " hi OverLength ctermbg=red ctermfg=white guibg=#592929
 hi VertSplit ctermbg=237 guibg=#3a3a3a
