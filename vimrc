@@ -21,7 +21,6 @@ set lazyredraw
 set backspace=indent,eol,start
 set colorcolumn=81
 set completeopt=longest,menuone
-set cursorline
 set laststatus=2
 set list
 set listchars=tab:·-,trail:-

@@ -7,7 +7,7 @@ set -U fish_user_paths \
     $ANDROID_HOME/tools \
     $ANDROID_HOME/platform-tools \
     $fish_user_paths
-setenv EDITOR vim
+setenv EDITOR nvim
 
 # Commands
 alias ll 'ls -alF'
