@@ -5,8 +5,7 @@ set -U fish_user_paths \
     /usr/local/bin \
     $YARN_BIN \
     $ANDROID_HOME/tools \
-    $ANDROID_HOME/platform-tools \
-    $fish_user_paths
+    $ANDROID_HOME/platform-tools
 setenv EDITOR nvim
 
 # Commands
