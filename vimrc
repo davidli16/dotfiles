@@ -109,64 +109,55 @@ set wildignore+=*/node_modules/*
 
 " === Plugins ===
 
-set shell=bash
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.local/share/nvim/plugged')
 
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 let g:airline#extensions#ale#enabled = 1
 
-Plugin 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'
 
-" Plugin 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 " let g:ycm_auto_trigger = 0
-Plugin 'myusuf3/numbers.vim'
+Plug 'myusuf3/numbers.vim'
 
-Plugin 'scrooloose/nerdcommenter'
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+nmap \ :Files<cr>
+nmap <leader>f :History<cr>
 
-Plugin 'ctrlpvim/ctrlp.vim'
-nmap \ :CtrlP<cr>
-nmap <leader>f :CtrlPMRU<cr>
-nmap <leader>C :CtrlPClearCache<cr>
-" Local working directory: Git > Subdirectory > Directory
-let g:ctrlp_workking_path_mode = 'ra'
-" Ignore gitignore files when searching
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-Plugin 'L9'
-
-Plugin 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
-Plugin 'dyng/ctrlsf.vim'
+Plug 'dyng/ctrlsf.vim'
 nmap <leader>a :CtrlSF<space>
 let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_auto_close = 0
 let g:ctrlsf_default_root = 'project'
 let g:ctrlsf_regex_pattern = 1
 
-Plugin 'sheerun/vim-polyglot'
-Plugin 'pangloss/vim-javascript'
-Plugin 'maxmellon/vim-jsx-pretty'
+Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 let g:vim_jsx_pretty_colorful_config = 1
+Plug 'prettier/vim-prettier'
+nmap <leader>p :PrettierAsync<cr>
 
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \    'python': ['pylint']
 \}
 
-Plugin 'noahfrederick/vim-skeleton'
+Plug 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>
 
-" Allow for per-directory .vimrc configurations
-Plugin 'MarcWeber/vim-addon-local-vimrc'
+Plug 'airblade/vim-gitgutter'
 
-call vundle#end()
+" Allow for per-directory .vimrc configurations
+Plug 'MarcWeber/vim-addon-local-vimrc'
+
+call plug#end()

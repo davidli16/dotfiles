@@ -1,12 +1,24 @@
 # Path
 set ANDROID_HOME ~/Library/Android/sdk
 set YARN_BIN (yarn global bin)
-set -U fish_user_paths \
+set PATH \
     /usr/local/bin \
     $YARN_BIN \
     $ANDROID_HOME/tools \
-    $ANDROID_HOME/platform-tools
-setenv EDITOR nvim
+    $ANDROID_HOME/platform-tools \
+    $PATH
+set -x EDITOR nvim
+
+# Configure FZF
+# Use the jellybean color scheme
+set -x FZF_DEFAULT_OPTS '
+    --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104
+    --color info:183,prompt:110,spinner:107,pointer:167,marker:215
+'
+# Use AG as the fuzzyfinder
+set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
+set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+set -x FZF_ALT_C_COMMAND "$FZF_DEFAULT_COMMAND"
 
 # Commands
 alias ll 'ls -alF'
