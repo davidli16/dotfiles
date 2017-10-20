@@ -16,7 +16,7 @@ set -x FZF_DEFAULT_OPTS '
     --color info:183,prompt:110,spinner:107,pointer:167,marker:215
 '
 # Use AG as the fuzzyfinder
-set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
+set -x FZF_DEFAULT_COMMAND 'ag --hidden --path-to-ignore ~/.ignore --ignore .git -g ""'
 set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 set -x FZF_ALT_C_COMMAND "$FZF_DEFAULT_COMMAND"
 

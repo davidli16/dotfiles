@@ -4,6 +4,7 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 ln -fshv $DIR/vim ~/.vim
 ln -fshv $DIR/vimrc ~/.vimrc
+ln -fshv $DIR/agignore ~/.ignore
 ln -fshv $DIR/tmux.conf ~/.tmux.conf
 ln -fshv $DIR/config/fish ~/.config/fish
 ln -fshv $DIR/config/nvim ~/.config/nvim
