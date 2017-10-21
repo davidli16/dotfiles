@@ -1,7 +1,3 @@
-" === Enable features ===
-filetype off
-filetype plugin indent on
-
 " === Basic Commands ===
 set autoindent
 set autoread
@@ -33,8 +29,6 @@ set sidescrolloff=5
 set splitbelow
 set splitright
 set wildmenu
-
-syntax enable
 
 " === Folding ===
 " set foldmethod=indent
