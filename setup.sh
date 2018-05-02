@@ -6,18 +6,24 @@ brew cask install google-chrome
 brew cask install iterm2
 
 brew install fish
-brew install nvim
+
+mkdir -p ~/.config
+
+# Tmux
 brew install tmux
-
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-ln -fshv $DIR/vim ~/.vim
-ln -fshv $DIR/vimrc ~/.vimrc
 ln -fshv $DIR/agignore ~/.ignore
 ln -fshv $DIR/tmux.conf ~/.tmux.conf
 ln -fshv $DIR/config/fish ~/.config/fish
+
+# Nvim
+brew install nvim
+ln -fshv $DIR/vim ~/.vim
+ln -fshv $DIR/vimrc ~/.vimrc
 ln -fshv $DIR/config/nvim ~/.config/nvim
+# Install vim plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qall
 
 # Git
 git config --global user.name "David Li"
@@ -33,10 +39,3 @@ git config --global alias.r 'rebase -i HEAD~20'
 git submodule init
 git submodule sync
 git submodule update
-
-# Vim
-# Install vim plug
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-vim +PlugInstall +qall
