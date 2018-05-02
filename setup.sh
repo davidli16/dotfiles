@@ -9,7 +9,8 @@ brew install fish
 brew install nvim
 brew install tmux
 
-chsh -s `which fish`
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -fshv $DIR/vim ~/.vim
 ln -fshv $DIR/vimrc ~/.vimrc
