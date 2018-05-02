@@ -2,6 +2,15 @@
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
+brew cask install google-chrome
+brew cask install iterm2
+
+brew install fish
+brew install nvim
+brew install tmux
+
+chsh -s `which fish`
+
 ln -fshv $DIR/vim ~/.vim
 ln -fshv $DIR/vimrc ~/.vimrc
 ln -fshv $DIR/agignore ~/.ignore
