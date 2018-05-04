@@ -1,3 +1,6 @@
+# Fish
+set fish_greeting ''
+
 # Path
 set ANDROID_HOME ~/Library/Android/sdk
 set YARN_BIN (yarn global bin)

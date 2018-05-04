@@ -1,1 +1,1 @@
-/Users/sona/.config/fisherman/z/conf.d/z.fish
+/Users/david/.config/fisherman/z/conf.d/z.fish

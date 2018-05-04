@@ -5,7 +5,9 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 brew cask install google-chrome
 brew cask install iterm2
 
+# Fish
 brew install fish
+touch .hushlogin
 
 mkdir -p ~/.config
 
