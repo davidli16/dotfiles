@@ -1,5 +1,6 @@
 # Fish
 set fish_greeting ''
+set -x -g TERM "xterm-256color"
 
 # Path
 set ANDROID_HOME ~/Library/Android/sdk
@@ -11,6 +12,10 @@ set PATH \
     $ANDROID_HOME/platform-tools \
     $PATH
 set -x EDITOR nvim
+set -x PIP_REQUIRE_VIRTUALENV true
+function gpip
+    env PIP_REQUIRE_VIRTUALENV="" pip $argv
+end
 
 # Configure FZF
 # Use the jellybean color scheme
