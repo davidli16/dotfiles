@@ -38,14 +38,15 @@ git config --global push.default simple
 git config --global pull.rebase true
 git config --global alias.a 'commit -a --amend'
 git config --global alias.c 'commit -m'
-git config --global alias.l 'log --oneline --graph'
-git config --global alias.r 'rebase -i HEAD~20'
-git config --global alias.st 'status'
-git config --global alias.cp 'cherry-pick'
-git config --global alias.su 'submodule update'
-git config --global alias.p 'pull'
 git config --global alias.co 'checkout'
+git config --global alias.cp 'cherry-pick'
+git config --global alias.l 'log --oneline --graph'
+git config --global alias.p 'pull'
+git config --global alias.r 'rebase -i HEAD~20'
 git config --global alias.rc 'rebase --continue'
+git config --global alias.rh 'reset --hard HEAD'
+git config --global alias.st 'status'
+git config --global alias.su 'submodule update'
 git submodule init
 git submodule sync
 git submodule update
