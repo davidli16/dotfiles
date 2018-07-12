@@ -12,6 +12,7 @@ set PATH \
     $ANDROID_HOME/platform-tools \
     $PATH
 set -x EDITOR nvim
+set -x PIPENV_VERBOSITY -1
 set -x PIP_REQUIRE_VIRTUALENV true
 function gpip
     env PIP_REQUIRE_VIRTUALENV="" pip $argv
