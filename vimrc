@@ -114,6 +114,7 @@ Plug 'tpope/vim-dispatch'
 " let g:ycm_auto_trigger = 0
 Plug 'myusuf3/numbers.vim'
 
+Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -138,7 +139,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 let g:vim_jsx_pretty_colorful_config = 1
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 nmap <leader>p :PrettierAsync<cr>
 
 Plug 'w0rp/ale'
