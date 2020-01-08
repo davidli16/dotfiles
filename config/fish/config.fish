@@ -78,3 +78,9 @@ function fish_prompt
 
   set_color normal
 end
+
+status --is-interactive
+
+direnv hook fish | source
+source (pyenv init -|psub)
+source /usr/local/opt/asdf/asdf.fish
