@@ -47,6 +47,7 @@ git config --global alias.rc 'rebase --continue'
 git config --global alias.rh 'reset --hard HEAD'
 git config --global alias.st 'status'
 git config --global alias.su 'submodule update'
+git config --global alias.b 'branch'
 git submodule init
 git submodule sync
 git submodule update
