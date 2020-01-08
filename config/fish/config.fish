@@ -82,5 +82,5 @@ end
 status --is-interactive
 
 direnv hook fish | source
-source (pyenv init -|psub)
+status --is-interactive; and source (pyenv init - | source)
 source /usr/local/opt/asdf/asdf.fish
