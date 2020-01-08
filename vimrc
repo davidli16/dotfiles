@@ -91,7 +91,7 @@ hi ColorColumn ctermbg=234 guibg=#1c1c1c
 " hi OverLength ctermbg=red ctermfg=white guibg=#592929
 hi VertSplit ctermbg=237 guibg=#3a3a3a
 " match OverLength /\%101v.\+/
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 " === Ignore ===
 
@@ -120,6 +120,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
+" Find and replace plugin
+Plug 'brooth/far.vim'
+let g:far#source = 'agnvim'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 nmap \ :Files<cr>
@@ -136,22 +140,53 @@ let g:ctrlsf_default_root = 'project'
 let g:ctrlsf_regex_pattern = 1
 
 Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
-let g:vim_jsx_pretty_colorful_config = 1
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 nmap <leader>p :PrettierAsync<cr>
+let g:prettier#exec_cmd_path = "/usr/local/bin/prettier"
+let g:prettier#exec_cmd_async = 1
+
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 Plug 'w0rp/ale'
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \    'python': ['pylint']
 \}
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 Plug 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>
-
-Plug 'airblade/vim-gitgutter'
 
 " Allow for per-directory .vimrc configurations
 Plug 'MarcWeber/vim-addon-local-vimrc'
