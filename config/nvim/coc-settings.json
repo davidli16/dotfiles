@@ -1,0 +1,5 @@
+{
+    "suggest.autoTrigger": "trigger",
+    "suggest.numberSelect": true,
+    "suggest.noselect": false
+}
