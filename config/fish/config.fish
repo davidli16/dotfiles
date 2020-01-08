@@ -1,4 +1,5 @@
 # Fish
+set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
 set fish_greeting ''
 set -x -g TERM "xterm-256color"
 
@@ -10,6 +11,7 @@ set PATH \
     $YARN_BIN \
     $ANDROID_HOME/tools \
     $ANDROID_HOME/platform-tools \
+    $MYSQL_PATH \
     $PATH
 set -x EDITOR nvim
 set -x PIPENV_VERBOSITY -1
