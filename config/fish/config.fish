@@ -81,6 +81,7 @@ end
 
 status --is-interactive
 
-direnv hook fish | source
-status --is-interactive; and source (pyenv init - | source)
 source /usr/local/opt/asdf/asdf.fish
+status --is-interactive; and pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
+direnv hook fish | source
