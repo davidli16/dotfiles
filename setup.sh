@@ -10,7 +10,6 @@ mkdir -p ~/.config
 # Fish
 brew install fish
 touch ~/.hushlogin
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 # Tmux
 brew install tmux
