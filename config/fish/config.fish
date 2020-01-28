@@ -44,8 +44,6 @@ alias la 'ls -A'
 alias l 'ls -CF'
 alias vi 'nvim'
 alias rbpost 'rbt-log-post --parent=HEAD~1'
-alias tm 'tmux -CC attach; or tmux -CC'
-alias title 'tmux rename-window'
 
 set normal (set_color normal)
 set magenta (set_color magenta)
