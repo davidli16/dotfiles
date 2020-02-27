@@ -639,7 +639,7 @@
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HideTabCloseButton</key>
 	<true/>
 	<key>HideTabNumber</key>
@@ -734,7 +734,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-867 1200 3440 1417 -867 1200 3440 1417 </string>
+	<string>407 132 710 402 0 0 1920 1200 </string>
 	<key>NeverWarnAboutShortLivedSessions_24168DD7-97FC-4FFB-8F67-7FE94DF5104B</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_24168DD7-97FC-4FFB-8F67-7FE94DF5104B_selection</key>
@@ -1619,7 +1619,7 @@ Resize Split Pane.Move Divider Right</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1200}}</string>
 		<key>topLeft</key>
-		<string>{274, 976}</string>
+		<string>{274, 977}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -1628,7 +1628,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>NoSyncInstallationId</key>
 	<string>D2999753-C685-4773-86FA-CA67B5829058</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>78</integer>
+	<integer>83</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2400,16 +2400,16 @@ Resize Split Pane.Move Divider Right</string>
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
-		<string>client_even</string>
-		<string>mode</string>
-		<string>Convert `&lt;Form</string>
-		<string>Convert &lt;</string>
-		<string>Rename `&lt;Modal</string>
-		<string>Rename &lt;M</string>
-		<string>remove a coup</string>
-		<string>git </string>
-		<string>prime</string>
-		<string>split</string>
+		<string>qgigit </string>
+		<string>fix</string>
+		<string>reassign</string>
+		<string>error</string>
+		<string>git qgit branch q</string>
+		<string>updatq</string>
+		<string>update</string>
+		<string>updati</string>
+		<string>visited</string>
+		<string>Visit!----</string>
 	</array>
 	<key>NoSyncSuppressRestartSessionConfirmationAlert</key>
 	<true/>
@@ -2497,7 +2497,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-08T00:45:45Z</date>
+	<date>2020-02-03T21:12:56Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
