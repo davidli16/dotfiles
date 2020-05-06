@@ -10,6 +10,8 @@
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -734,7 +736,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>407 132 710 402 0 0 1920 1200 </string>
+	<string>226 1200 710 402 -805 1200 3440 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_24168DD7-97FC-4FFB-8F67-7FE94DF5104B</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_24168DD7-97FC-4FFB-8F67-7FE94DF5104B_selection</key>
@@ -1596,16 +1598,18 @@ Resize Split Pane.Move Divider Right</string>
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.6</string>
-		<string>3.3.0beta16</string>
-		<string>3.3.1</string>
-		<string>3.3.0beta13</string>
-		<string>3.3.7</string>
 		<string>3.3.0beta10</string>
+		<string>3.3.1</string>
+		<string>3.3.8</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.6</string>
 		<string>3.3.0beta15</string>
-		<string>3.3.0</string>
-		<string>3.3.2</string>
+		<string>3.3.0beta16</string>
 		<string>3.3.4</string>
+		<string>3.3.2</string>
+		<string>3.3.9</string>
+		<string>3.3.0</string>
+		<string>3.3.7</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -1628,7 +1632,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>NoSyncInstallationId</key>
 	<string>D2999753-C685-4773-86FA-CA67B5829058</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>83</integer>
+	<integer>103</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2385,32 +2389,6 @@ Resize Split Pane.Move Divider Right</string>
 			</dict>
 		</array>
 	</dict>
-	<key>NoSyncSearchHistory</key>
-	<array>
-		<string>commentReq</string>
-		<string>deprec</string>
-		<string>Improve</string>
-		<string>isCareProAppl</string>
-		<string>shared</string>
-		<string>history</string>
-		<string>comms</string>
-		<string>remove</string>
-		<string>strategy</string>
-		<string>redux</string>
-	</array>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>qgigit </string>
-		<string>fix</string>
-		<string>reassign</string>
-		<string>error</string>
-		<string>git qgit branch q</string>
-		<string>updatq</string>
-		<string>update</string>
-		<string>updati</string>
-		<string>visited</string>
-		<string>Visit!----</string>
-	</array>
 	<key>NoSyncSuppressRestartSessionConfirmationAlert</key>
 	<true/>
 	<key>NoSyncSuppressRestartSessionConfirmationAlert_selection</key>
@@ -2497,7 +2475,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-03T21:12:56Z</date>
+	<date>2020-04-29T17:12:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -8558,7 +8536,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.7</string>
+	<string>3.3.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
