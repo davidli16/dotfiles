@@ -124,28 +124,35 @@ Plug 'tpope/vim-surround'
 Plug 'brooth/far.vim'
 let g:far#source = 'agnvim'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 nmap \ :Files<cr>
 nmap <leader>f :History<cr>
+nmap <leader>a :Rg<space>
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 Plug 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
-
-Plug 'dyng/ctrlsf.vim'
-nmap <leader>a :CtrlSF<space>
-let g:ctrlsf_default_view_mode = 'compact'
-let g:ctrlsf_auto_close = 0
-let g:ctrlsf_default_root = 'project'
-let g:ctrlsf_regex_pattern = 1
 
 Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 nmap <leader>p :PrettierAsync<cr>
 let g:prettier#exec_cmd_path = "/usr/local/bin/prettier"
 let g:prettier#exec_cmd_async = 1
-
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 Plug 'w0rp/ale'
 let g:ale_fixers = {

@@ -17,6 +17,9 @@ ln -fshv $DIR/agignore ~/.ignore
 ln -fshv $DIR/tmux.conf ~/.tmux.conf
 ln -fshv $DIR/config/fish ~/.config/fish
 
+# Ripgrep
+brew install ripgrep
+
 # Nvim
 brew install nvim
 ln -fshv $DIR/vim ~/.vim
