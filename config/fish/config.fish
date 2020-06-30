@@ -12,7 +12,7 @@ set -x -g TERM "xterm-256color"
 
 # Path
 set ANDROID_HOME ~/Library/Android/sdk
-set YARN_BIN (yarn global bin)
+set YARN_BIN /usr/local/bin
 set PATH \
     /usr/local/bin \
     $YARN_BIN \
@@ -84,5 +84,5 @@ function fish_prompt
   set_color normal
 end
 
-source (brew --prefix asdf)/asdf.fish
+source /usr/local/opt/asdf/asdf.fish
 eval (direnv hook fish)
