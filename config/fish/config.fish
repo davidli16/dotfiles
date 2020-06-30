@@ -84,7 +84,5 @@ function fish_prompt
   set_color normal
 end
 
-source /usr/local/opt/asdf/asdf.fish
-pyenv init - | source
-pyenv virtualenv-init - | source
+source (brew --prefix asdf)/asdf.fish
 eval (direnv hook fish)

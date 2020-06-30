@@ -736,7 +736,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>226 1200 710 402 -805 1200 3440 1417 </string>
+	<string>226 155 710 402 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_24168DD7-97FC-4FFB-8F67-7FE94DF5104B</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_24168DD7-97FC-4FFB-8F67-7FE94DF5104B_selection</key>
@@ -1606,6 +1606,7 @@ Resize Split Pane.Move Divider Right</string>
 		<string>3.3.0beta15</string>
 		<string>3.3.0beta16</string>
 		<string>3.3.4</string>
+		<string>3.3.11</string>
 		<string>3.3.2</string>
 		<string>3.3.9</string>
 		<string>3.3.0</string>
@@ -1623,7 +1624,7 @@ Resize Split Pane.Move Divider Right</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1200}}</string>
 		<key>topLeft</key>
-		<string>{274, 977}</string>
+		<string>{860, 790}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -1632,7 +1633,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>NoSyncInstallationId</key>
 	<string>D2999753-C685-4773-86FA-CA67B5829058</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>103</integer>
+	<integer>125</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2475,7 +2476,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-29T17:12:44Z</date>
+	<date>2020-06-30T01:23:36Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -8536,7 +8537,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.9</string>
+	<string>3.3.11</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
