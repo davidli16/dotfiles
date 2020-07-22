@@ -69,8 +69,6 @@ vnoremap <tab> %
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " Hides search highlights
 nnoremap <leader><space> :noh<cr>
-" Sorts the lines
-nnoremap <leader>s :sort<cr>
 " Disable arrow nav outside of insert mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -106,12 +104,9 @@ set wildignore+=*/node_modules/*
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
-let g:airline#extensions#ale#enabled = 1
 
 Plug 'tpope/vim-dispatch'
 
-" Plug 'Valloric/YouCompleteMe'
-" let g:ycm_auto_trigger = 0
 Plug 'myusuf3/numbers.vim'
 
 Plug 'raimondi/delimitmate'
@@ -128,7 +123,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 nmap \ :Files<cr>
 nmap <leader>f :History<cr>
-nmap <leader>a :Rg<space>
+nmap <leader>s :Rg<space>
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -149,23 +144,6 @@ Plug 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<cr>
 
 Plug 'sheerun/vim-polyglot'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-nmap <leader>p :PrettierAsync<cr>
-let g:prettier#exec_cmd_path = "/usr/local/bin/prettier"
-let g:prettier#exec_cmd_async = 1
-
-Plug 'w0rp/ale'
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\}
-let g:ale_fix_on_save = 1
-let g:ale_sign_column_always = 1
-let g:ale_linters = {
-\    'python': ['pylint']
-\}
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 inoremap <silent><expr> <TAB>
@@ -191,6 +169,12 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" Remap for do codeAction of selected region
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
+xmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
 
 Plug 'noahfrederick/vim-skeleton'
 nmap <leader>t :SkelInsert!<space>

@@ -1,5 +1,14 @@
 {
     "suggest.autoTrigger": "trigger",
     "suggest.numberSelect": true,
-    "suggest.noselect": false
+    "suggest.noselect": false,
+    "python.formatting.provider": "black",
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "scss",
+        "python",
+        "typescript",
+        "javascript",
+        "typescriptreact"
+    ]
 }
