@@ -112,6 +112,7 @@ Plug 'myusuf3/numbers.vim'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
