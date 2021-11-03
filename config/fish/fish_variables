@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export PYENV_ROOT:/Users/david/\x2epyenv
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/Users/david/\x2elocal/share/z/data
@@ -38,6 +39,6 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/local/opt/node\x4010/bin\x1e/Users/david/\x2efzf/bin
+SETUVAR fish_user_paths:/Users/david/\x2epyenv/bin\x1e/usr/local/opt/node\x4010/bin\x1e/usr/local/opt/node\x4010/bin\x1e/Users/david/\x2efzf/bin
 SETUVAR fisher_dependency_count:\x1ez\x1ebass\x1episces\x1epipenv\x1epipenv
 SETUVAR pisces_pairs:\x28\x2c\x29\x1e\x5b\x2c\x5d\x1e\x7b\x2c\x7d\x1e\x22\x2c\x22\x1e\x27\x2c\x27

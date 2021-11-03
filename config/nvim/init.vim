@@ -15,8 +15,7 @@ if (empty($TMUX))
   endif
 endif
 
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/Users/david/.pyenv/versions/3.6.10/envs/neovim/bin/python'
 
 set runtimepath+=~/.vim,~/.vim/after
 set packpath+=~/.vim
