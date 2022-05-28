@@ -6,7 +6,6 @@ if not functions -q fisher
 end
 
 # Fish
-set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
 set fish_greeting ''
 set -x -g TERM "xterm-256color"
 
@@ -18,7 +17,6 @@ set PATH \
     $YARN_BIN \
     $ANDROID_HOME/tools \
     $ANDROID_HOME/platform-tools \
-    $MYSQL_PATH \
     $PATH
 set -x EDITOR nvim
 set -x PIPENV_VERBOSITY -1
@@ -88,3 +86,11 @@ source /usr/local/opt/asdf/asdf.fish
 eval (direnv hook fish)
 status --is-login; and pyenv init --path | source
 status --is-interactive; and pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
+
+function h4mfa -a mfa
+  set token (aws sts get-session-token --serial-number "arn:aws:iam::900965112463:mfa/david" --token-code "$mfa")
+  set -gx AWS_ACCESS_KEY_ID (echo "$token" | jq -r '.Credentials.AccessKeyId')
+  set -gx AWS_SECRET_ACCESS_KEY (echo "$token" | jq -r '.Credentials.SecretAccessKey')
+  set -gx AWS_SESSION_TOKEN (echo "$token" | jq -r '.Credentials.SessionToken')
+end
