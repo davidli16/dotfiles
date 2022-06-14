@@ -84,7 +84,7 @@ function fish_prompt
   set_color normal
 end
 
-source /usr/local/opt/asdf/asdf.fish
+source (brew --prefix asdf)/libexec/asdf.fish
 status --is-login; and pyenv init --path | source
 status --is-interactive; and pyenv init - | source
 status --is-interactive; and pyenv virtualenv-init - | source
