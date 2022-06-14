@@ -1,3 +1,5 @@
+eval (/opt/homebrew/bin/brew shellenv)
+
 # Install fisher if it's not available
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config

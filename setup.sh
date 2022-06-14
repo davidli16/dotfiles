@@ -2,23 +2,22 @@
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
+# Install brew and install our main tools
+NONINTERACTIVE=1 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew bundle install
+
 mkdir -p ~/.config
 
 # Fish
-brew install fish
 touch ~/.hushlogin
 
 # Tmux
-brew install tmux
 ln -fshv $DIR/agignore ~/.ignore
 ln -fshv $DIR/tmux.conf ~/.tmux.conf
 ln -fshv $DIR/config/fish ~/.config/fish
 
-# Ripgrep
-brew install ripgrep
-
 # Nvim
-brew install nvim
 ln -fshv $DIR/vim ~/.vim
 ln -fshv $DIR/vimrc ~/.vimrc
 ln -fshv $DIR/config/nvim ~/.config/nvim

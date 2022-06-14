@@ -1,0 +1,7 @@
+brew "git"
+brew "fish"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "neovim"
+brew "tmux"
+brew "ripgrep"
