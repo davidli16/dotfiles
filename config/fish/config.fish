@@ -83,7 +83,6 @@ function fish_prompt
 end
 
 source /usr/local/opt/asdf/asdf.fish
-eval (direnv hook fish)
 status --is-login; and pyenv init --path | source
 status --is-interactive; and pyenv init - | source
 status --is-interactive; and pyenv virtualenv-init - | source
