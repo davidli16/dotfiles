@@ -7,8 +7,7 @@ brew "tmux"
 # Dev utils
 brew "ripgrep"
 brew "fzf"
-brew "pyenv"
-brew "pyenv-virtualenv"
+brew "jq"
 
 # System tools
 brew "pstree"

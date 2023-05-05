@@ -116,10 +116,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
-" Find and replace plugin
-Plug 'brooth/far.vim'
-let g:far#source = 'agnvim'
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 nmap \ :Files<cr>

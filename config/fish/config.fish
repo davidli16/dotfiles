@@ -21,7 +21,6 @@ set PATH \
     $ANDROID_HOME/platform-tools \
     $PATH
 set -x EDITOR nvim
-set -x PIPENV_VERBOSITY -1
 set -x PIP_REQUIRE_VIRTUALENV true
 function gpip
     env PIP_REQUIRE_VIRTUALENV="" pip $argv
@@ -33,10 +32,7 @@ set -x FZF_DEFAULT_OPTS '
     --color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104
     --color info:183,prompt:110,spinner:107,pointer:167,marker:215
 '
-# Use AG as the fuzzyfinder
-set -x FZF_DEFAULT_COMMAND 'ag --hidden --path-to-ignore ~/.ignore --ignore .git -g ""'
-set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
-set -x FZF_ALT_C_COMMAND "$FZF_DEFAULT_COMMAND"
+set -gx FZF_DEFAULT_COMMAND  'rg --files'
 
 # Commands
 alias ll 'ls -alF'
@@ -85,9 +81,6 @@ function fish_prompt
 end
 
 source (brew --prefix asdf)/libexec/asdf.fish
-status --is-login; and pyenv init --path | source
-status --is-interactive; and pyenv init - | source
-status --is-interactive; and pyenv virtualenv-init - | source
 
 function h4mfa -a mfa
   set token (aws sts get-session-token --serial-number "arn:aws:iam::900965112463:mfa/david" --token-code "$mfa")
