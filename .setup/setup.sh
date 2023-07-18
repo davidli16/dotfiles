@@ -1,26 +1,11 @@
 #!/bin/bash
 
-DIR="$( cd "$( dirname "$0" )" && pwd )"
-
 # Install brew and install our main tools
 NONINTERACTIVE=1 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle install
 
-mkdir -p ~/.config
-
-# Fish
-touch ~/.hushlogin
-
-# Tmux
-ln -fshv $DIR/agignore ~/.ignore
-ln -fshv $DIR/tmux.conf ~/.tmux.conf
-ln -fshv $DIR/config/fish ~/.config/fish
-
 # Nvim
-ln -fshv $DIR/vim ~/.vim
-ln -fshv $DIR/vimrc ~/.vimrc
-ln -fshv $DIR/config/nvim ~/.config/nvim
 # Install vim plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
