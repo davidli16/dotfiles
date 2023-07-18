@@ -12,14 +12,6 @@ set fish_greeting ''
 set -x -g TERM "xterm-256color"
 
 # Path
-set ANDROID_HOME ~/Library/Android/sdk
-set YARN_BIN /usr/local/bin
-set PATH \
-    /usr/local/bin \
-    $YARN_BIN \
-    $ANDROID_HOME/tools \
-    $ANDROID_HOME/platform-tools \
-    $PATH
 set -x EDITOR nvim
 set -x PIP_REQUIRE_VIRTUALENV true
 function gpip
@@ -39,7 +31,6 @@ alias ll 'ls -alF'
 alias la 'ls -A'
 alias l 'ls -CF'
 alias vi 'nvim'
-alias rbpost 'rbt-log-post --parent=HEAD~1'
 
 set normal (set_color normal)
 set magenta (set_color magenta)
@@ -78,13 +69,4 @@ function fish_prompt
   printf '%s ' (__fish_git_prompt)
 
   set_color normal
-end
-
-source (brew --prefix asdf)/libexec/asdf.fish
-
-function h4mfa -a mfa
-  set token (aws sts get-session-token --serial-number "arn:aws:iam::900965112463:mfa/david" --token-code "$mfa")
-  set -gx AWS_ACCESS_KEY_ID (echo "$token" | jq -r '.Credentials.AccessKeyId')
-  set -gx AWS_SECRET_ACCESS_KEY (echo "$token" | jq -r '.Credentials.SecretAccessKey')
-  set -gx AWS_SESSION_TOKEN (echo "$token" | jq -r '.Credentials.SessionToken')
 end
