@@ -480,6 +480,56 @@
           }
         }
       }
+    },
+    "cask": {
+      "alfred": {
+        "version": "5.1.1,2138",
+        "options": {
+          "full_name": "alfred"
+        }
+      },
+      "iterm2": {
+        "version": "3.4.19",
+        "options": {
+          "full_name": "iterm2"
+        }
+      },
+      "alt-tab": {
+        "version": "6.61.0",
+        "options": {
+          "full_name": "alt-tab"
+        }
+      },
+      "amethyst": {
+        "version": "0.19.0",
+        "options": {
+          "full_name": "amethyst"
+        }
+      },
+      "docker": {
+        "version": "4.21.1,114176",
+        "options": {
+          "full_name": "docker"
+        }
+      },
+      "google-chrome": {
+        "version": "115.0.5790.102",
+        "options": {
+          "full_name": "google-chrome"
+        }
+      },
+      "spotify": {
+        "version": "1.2.16.947,cfbaa410,105",
+        "options": {
+          "full_name": "spotify"
+        }
+      },
+      "visual-studio-code": {
+        "version": "1.80.1",
+        "options": {
+          "full_name": "visual-studio-code"
+        }
+      }
     }
   },
   "system": {
@@ -493,7 +543,7 @@
         "macOS": "12.4"
       },
       "ventura": {
-        "HOMEBREW_VERSION": "4.1.0",
+        "HOMEBREW_VERSION": "4.1.1",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.1.0.1.1683849156",
