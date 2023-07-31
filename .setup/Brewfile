@@ -8,6 +8,7 @@ cask "iterm2"
 cask "spotify"
 cask "visual-studio-code"
 cask "google-drive"
+cask "notunes"
 
 # Native tools
 brew "fish"
