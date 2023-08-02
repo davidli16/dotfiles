@@ -60,7 +60,7 @@ set encoding=utf-8
 " === Key Bindings ===
 let mapleader = ","
 
-nnoremap ; :
+nnoremap <space> :
 inoremap jk <esc>
 nnoremap / /\v
 vnoremap / /\v
@@ -74,7 +74,6 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-nnoremap <space> <leader>zA
 
 " === Ignore ===
 
