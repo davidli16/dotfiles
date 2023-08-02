@@ -1,22 +1,72 @@
-"Credit joshdick
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
-if (empty($TMUX))
-  if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
-let g:python3_host_prog = '/Users/david/.pyenv/versions/3.6.10/envs/neovim/bin/python'
-
 set runtimepath+=~/.vim,~/.vim/after
 set packpath+=~/.vim
 source ~/.vimrc
+
+" === Plugins ===
+
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'tpope/vim-dispatch'
+
+Plug 'myusuf3/numbers.vim'
+
+Plug 'raimondi/delimitmate'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+nmap \ :Files<cr>
+nmap <leader>f :History<cr>
+nmap <leader>s :Rg<space>
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+Plug 'sjl/gundo.vim'
+nnoremap <leader>u :GundoToggle<cr>
+
+Plug 'sheerun/vim-polyglot'
+
+Plug 'noahfrederick/vim-skeleton'
+nmap <leader>t :SkelInsert!<space>
+
+" Allow for per-directory .vimrc configurations
+Plug 'MarcWeber/vim-addon-local-vimrc'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+
+call plug#end()
+
+" === Styles ===
+color jellybeans
+set t_Co=256
+hi Normal guibg=none ctermbg=none
+hi NonText guibg=none ctermbg=none
+hi LineNr guibg=none ctermbg=none
+hi SignColumn guibg=none ctermbg=none
+hi CursorLine guibg=none ctermbg=none
+hi Folded guibg=none ctermbg=none
+hi ColorColumn ctermbg=234 guibg=#1c1c1c
+" hi OverLength ctermbg=red ctermfg=white guibg=#592929
+hi VertSplit ctermbg=237 guibg=#3a3a3a
+" match OverLength /\%101v.\+/
+set fillchars+=vert:\
