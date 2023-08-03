@@ -23,7 +23,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
-let g:fzf_layout = { 'down': '10' }
+let g:fzf_layout = { 'down': '20%' }
 nmap \ :Files<cr>
 nmap <leader>f :History<cr>
 nmap <leader>s :Rg<space>
@@ -73,4 +73,5 @@ hi ColorColumn ctermbg=234 guibg=#1c1c1c
 " hi OverLength ctermbg=red ctermfg=white guibg=#592929
 hi VertSplit ctermbg=237 guibg=#3a3a3a
 " match OverLength /\%101v.\+/
-set fillchars+=vert:\
+" There is an intentional whitespace here to remove the split character
+set fillchars+=vert:\ 

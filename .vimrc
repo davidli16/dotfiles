@@ -33,7 +33,7 @@ set hidden
 
 " === Folding ===
 " set foldmethod=indent
-" set nofoldenable
+set nofoldenable
 
 " === Searching ===
 set gdefault
