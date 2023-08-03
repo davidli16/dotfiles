@@ -1522,7 +1522,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
-			<integer>13</integer>
+			<integer>12</integer>
 			<key>Working Directory</key>
 			<string>/Users/sona</string>
 		</dict>
@@ -1545,6 +1545,8 @@ Resize Split Pane.Move Divider Right</string>
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
+	<key>PerPaneBackgroundImage</key>
+	<false/>
 	<key>PerformDNSLookups</key>
 	<false/>
 	<key>PerformDictionaryLookupOnQuickLook</key>
@@ -1583,7 +1585,7 @@ Resize Split Pane.Move Divider Right</string>
 		</dict>
 	</dict>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
-	<false/>
+	<true/>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1611,7 +1613,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.18857176802032188</real>
+	<real>0.15438184083585582</real>
 	<key>StretchTabsToFillBar</key>
 	<true/>
 	<key>SwitchTabModifier</key>
@@ -1624,6 +1626,12 @@ Resize Split Pane.Move Divider Right</string>
 	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>1</integer>
+	<key>TabsHaveCloseButton</key>
+	<true/>
+	<key>TerminalMargin</key>
+	<integer>10</integer>
+	<key>TerminalVMargin</key>
+	<integer>10</integer>
 	<key>ThreeFingerEmulates</key>
 	<false/>
 	<key>TmuxDashboardLimit</key>
