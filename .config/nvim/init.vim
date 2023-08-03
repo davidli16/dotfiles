@@ -22,9 +22,12 @@ Plug 'tpope/vim-surround'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+let g:fzf_layout = { 'down': '10' }
 nmap \ :Files<cr>
 nmap <leader>f :History<cr>
 nmap <leader>s :Rg<space>
+nmap <leader>b :Buffers<cr>
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],

@@ -29,6 +29,7 @@ set sidescrolloff=5
 set splitbelow
 set splitright
 set wildmenu
+set hidden
 
 " === Folding ===
 " set foldmethod=indent
