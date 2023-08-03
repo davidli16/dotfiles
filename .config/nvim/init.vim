@@ -7,6 +7,7 @@ source ~/.vimrc
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1
 
 Plug 'tpope/vim-dispatch'
 
