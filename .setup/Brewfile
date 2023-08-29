@@ -24,3 +24,4 @@ brew "jq"
 # System tools
 brew "pstree"
 brew "tree"
+brew "starship"
