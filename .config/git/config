@@ -27,3 +27,5 @@
 	b = branch
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
