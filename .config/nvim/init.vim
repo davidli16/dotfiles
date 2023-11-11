@@ -58,6 +58,8 @@ Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 " === Styles ===

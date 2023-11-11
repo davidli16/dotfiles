@@ -25,3 +25,6 @@ brew "jq"
 brew "pstree"
 brew "tree"
 brew "starship"
+
+# Runtimes
+brew "nodejs"
