@@ -20,11 +20,15 @@ brew "tmux"
 brew "ripgrep"
 brew "fzf"
 brew "jq"
+brew "direnv"
 
 # System tools
 brew "pstree"
 brew "tree"
 brew "starship"
+
+# Utilities
+brew "bitwarden-cli"
 
 # Runtimes
 brew "nodejs"

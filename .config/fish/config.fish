@@ -39,5 +39,6 @@ set green (set_color green)
 set red (set_color red)
 set gray (set_color -o black)
 
-# Install Starship
+# Install tools
 starship init fish | source
+direnv hook fish | source
