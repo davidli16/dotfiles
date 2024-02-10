@@ -1,0 +1,8 @@
+\.git
+\.gitignore
+\.gitmodules
+
+^/setup.sh
+^/.*\.plist
+^/Brewfile.*
+^/README.*
