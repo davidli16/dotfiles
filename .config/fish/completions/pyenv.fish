@@ -1,1 +1,0 @@
-/Users/sona/.config/fisherman/pyenv/completions/pyenv.fish
