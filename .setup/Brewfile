@@ -26,6 +26,7 @@ brew "direnv"
 brew "pstree"
 brew "tree"
 brew "starship"
+brew "stow"
 
 # Utilities
 brew "bitwarden-cli"
