@@ -1,3 +1,6 @@
+# Tap
+tap "homebrew/cask-fonts"
+
 # Cask
 cask "alfred"
 cask "alt-tab"
@@ -10,6 +13,7 @@ cask "visual-studio-code"
 cask "google-drive"
 cask "notunes"
 cask "vlc"
+cask "font-sauce-code-pro-nerd-font"
 
 # Native tools
 brew "fish"

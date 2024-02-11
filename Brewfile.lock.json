@@ -782,6 +782,17 @@
         "options": {
           "full_name": "vlc"
         }
+      },
+      "font-sauce-code-pro-nerd-font": {
+        "version": "3.1.1",
+        "options": {
+          "full_name": "font-sauce-code-pro-nerd-font"
+        }
+      }
+    },
+    "tap": {
+      "homebrew/cask-fonts": {
+        "revision": "2708973cc6ff7d88c36aa461c7614d6d1e6b8044"
       }
     }
   },
