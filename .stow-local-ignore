@@ -5,5 +5,4 @@
 ^/Makefile
 ^/setup.sh
 ^/.*\.plist
-^/Brewfile.*
 ^/README.*
