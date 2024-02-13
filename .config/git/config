@@ -4,6 +4,7 @@
 [color]
 	ui = true
 [diff]
+	external = difft
 	wsErrorHighlight = all
 [format]
 	pretty = oneline

@@ -28,6 +28,7 @@ brew "ripgrep"
 brew "fzf"
 brew "jq"
 brew "direnv"
+brew "difftastic"
 
 # System tools
 brew "pstree"
