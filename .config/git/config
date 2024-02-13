@@ -1,6 +1,10 @@
 [user]
 	name = David Li
 	email = davidli@cs.stanford.edu
+[rerere]
+	enabled = true
+[column]
+	ui = auto
 [color]
 	ui = true
 [diff]
