@@ -77,6 +77,18 @@
         "options": {
           "full_name": "font-sauce-code-pro-nerd-font"
         }
+      },
+      "messenger": {
+        "version": "205.0.0.12.228",
+        "options": {
+          "full_name": "messenger"
+        }
+      },
+      "whatsapp": {
+        "version": "2.24.2.76",
+        "options": {
+          "full_name": "whatsapp"
+        }
       }
     },
     "brew": {

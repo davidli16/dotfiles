@@ -14,6 +14,8 @@ cask "google-drive"
 cask "notunes"
 cask "vlc"
 cask "font-sauce-code-pro-nerd-font"
+cask "messenger"
+cask "whatsapp"
 
 # Native tools
 brew "fish"
