@@ -2,6 +2,7 @@
 \.gitignore
 \.gitmodules
 
+^/Makefile
 ^/setup.sh
 ^/.*\.plist
 ^/Brewfile.*
