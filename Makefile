@@ -14,6 +14,7 @@ Brewfile: install-brew
 
 Brewfile.lock.json: Brewfile
 	brew bundle install
+	brew cleanup
 
 # ------------
 # Neovim
