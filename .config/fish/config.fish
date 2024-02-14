@@ -42,3 +42,4 @@ set gray (set_color -o black)
 # Install tools
 starship init fish | source
 direnv hook fish | source
+zoxide init fish | source

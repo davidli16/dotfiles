@@ -35,6 +35,7 @@ brew "pstree"
 brew "tree"
 brew "starship"
 brew "stow"
+brew "zoxide"
 
 # Utilities
 brew "bitwarden-cli"
