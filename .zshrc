@@ -1,3 +1,5 @@
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Commands
 alias ll="ls -alF"
 alias la="ls -A"
@@ -8,3 +10,5 @@ alias vi="nvim"
 source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
 autoload -U compinit; compinit
+eval "$(mise activate zsh)"
+eval "$(starship init zsh)"

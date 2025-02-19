@@ -40,6 +40,7 @@ set red (set_color red)
 set gray (set_color -o black)
 
 # Install tools
+mise activate fish | source
 starship init fish | source
-direnv hook fish | source
 zoxide init fish | source
+fzf --fish | source
