@@ -1,10 +1,5 @@
-# Tap
-tap "homebrew/cask-fonts"
-
 # Cask
 cask "alfred"
-cask "alt-tab"
-cask "amethyst"
 cask "docker"
 cask "google-chrome"
 cask "iterm2"
@@ -14,6 +9,7 @@ cask "google-drive"
 cask "notunes"
 cask "vlc"
 cask "font-sauce-code-pro-nerd-font"
+cask "yaak"
 cask "messenger"
 cask "whatsapp"
 
@@ -27,8 +23,8 @@ brew "tmux"
 brew "ripgrep"
 brew "fzf"
 brew "jq"
-brew "direnv"
 brew "difftastic"
+brew "mise"
 
 # System tools
 brew "pstree"
@@ -39,6 +35,3 @@ brew "zoxide"
 
 # Utilities
 brew "bitwarden-cli"
-
-# Runtimes
-brew "nodejs"
