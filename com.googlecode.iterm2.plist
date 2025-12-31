@@ -655,7 +655,7 @@
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>HideTabCloseButton</key>
 	<true/>
 	<key>HideTabNumber</key>
@@ -878,8 +878,6 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string></string>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1385,7 +1383,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.15438184083585582</real>
 	<key>StretchTabsToFillBar</key>
-	<true/>
+	<false/>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -1395,7 +1393,7 @@ Resize Split Pane.Move Divider Right</string>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>1</integer>
 	<key>TabViewType</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
 	<true/>
 	<key>TerminalMargin</key>

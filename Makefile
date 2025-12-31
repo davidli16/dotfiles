@@ -1,4 +1,4 @@
-all: brew git stow
+all: brew git iterm stow
 
 # ------------
 # Homebrew
@@ -16,16 +16,15 @@ Brewfile.lock.json: Brewfile
 	brew bundle install
 	brew cleanup
 
-# ------------
-# Stow
-# ------------
 .PHONY: stow
 stow:
 	stow .
 
-# ------------
-#  Git
-# ------------
+.PHONY: iterm
+iterm:
+	defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles"
+	defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
 .PHONY: git
 git: git-submodules
 
