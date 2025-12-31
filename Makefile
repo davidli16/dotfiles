@@ -17,13 +17,6 @@ Brewfile.lock.json: Brewfile
 	brew cleanup
 
 # ------------
-# Neovim
-# ------------
-.PHONY: nvim
-nvim:
-	nvim +PlugInstall +qall
-
-# ------------
 # Stow
 # ------------
 .PHONY: stow

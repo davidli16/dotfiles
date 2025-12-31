@@ -12,7 +12,6 @@ opt.autoread = true
 opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
-opt.pastetoggle = "<F8>"
 opt.lazyredraw = true
 
 -- -----------------------------------------------------------------
@@ -43,6 +42,7 @@ opt.fillchars = {
 }
 opt.backspace = { "indent", "eol", "start" }
 opt.completeopt = { "longest", "menuone" }
+opt.termguicolors = true
 
 -- -----------------------------------------------------------------
 -- Folding
@@ -78,7 +78,6 @@ opt.wrap = false
 opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.tabstop = 4
-opt.fileencoding = "utf-8"
 
 -- -----------------------------------------------------------------
 -- Ignore patterns

@@ -6,7 +6,17 @@ require("lazy").setup({
   -- -----------------------------------------------------------------
   -- UI / Appearance
   -- -----------------------------------------------------------------
-  { "nanotech/jellybeans.vim", lazy = false, priority = 1000 },
+  {
+    "metalelf0/jellybeans-nvim",
+    dependencies = { "rktjmp/lush.nvim" },
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      -- load the colorscheme here
+      vim.cmd([[colorscheme jellybeans-nvim]])
+    end,
+  },
+
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -31,12 +41,6 @@ require("lazy").setup({
   { "mbbill/undotree" },
   { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
   { "numToStr/Comment.nvim", opts = {} },
-  {
-    "klen/nvim-config-local",
-    opts = {
-      config_files = { ".nvim.lua", ".nvimrc", ".vimrc" },
-    },
-  },
 
   -- -----------------------------------------------------------------
   -- Search / Navigation
@@ -65,14 +69,8 @@ require("lazy").setup({
   -- -----------------------------------------------------------------
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     build = ":TSUpdate",
-    opts = {
-      highlight = { enable = true },
-      indent = { enable = true },
-    },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-    end,
   },
 
   -- -----------------------------------------------------------------
