@@ -1,4 +1,4 @@
-all: brew git nvim stow
+all: brew git stow
 
 # ------------
 # Homebrew
@@ -15,13 +15,6 @@ Brewfile: install-brew
 Brewfile.lock.json: Brewfile
 	brew bundle install
 	brew cleanup
-
-# ------------
-# Neovim
-# ------------
-.PHONY: nvim
-nvim:
-	nvim +PlugInstall +qall
 
 # ------------
 # Stow
