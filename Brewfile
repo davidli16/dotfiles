@@ -1,17 +1,16 @@
 # Cask
 cask "alfred"
-cask "docker"
+cask "docker-desktop"
 cask "google-chrome"
 cask "iterm2"
 cask "spotify"
-cask "visual-studio-code"
 cask "google-drive"
 cask "notunes"
 cask "vlc"
 cask "font-sauce-code-pro-nerd-font"
 cask "yaak"
-cask "messenger"
-cask "whatsapp"
+cask "jordanbaird-ice"
+cask "zed"
 
 # Native tools
 brew "fish"
